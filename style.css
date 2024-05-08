@@ -61,8 +61,9 @@ a {
     font-size: 17px;
 }
 
-a:hover {
+nav > a:hover {
     color: var(--cor03);
+    transform: scale(1.1);
 }
 
 button {
@@ -76,6 +77,9 @@ button {
     margin-right: 30px;
 }
 
+button:hover {
+    color: var(--cor02);
+}
 #titulo {
     display: flex;
     align-items: center;
@@ -149,6 +153,10 @@ h1 {
     justify-content: center;
 }
 
+.buytokens:hover {
+    color: var(--cor03);
+}
+
 .viewtokens {
     display: flex;
     border-radius: 30px;
@@ -159,6 +167,11 @@ h1 {
     width: 95%;
     margin: 0px;
     justify-content: center;
+}
+
+
+.viewtokens:hover {
+    color: var(--cor03);
 }
 
 footer {
@@ -202,6 +215,10 @@ footer {
     gap: 1rem;
 }
 
+#logofinal a:hover {
+    color: var(--cor03);
+}
+
 #logofinal > p {
     font-size: 16px;
 }
@@ -218,6 +235,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.links a:hover {
+    color: var(--cor03);
+    transform: scale(1.1);
 }
 
 .tittlefooter {
