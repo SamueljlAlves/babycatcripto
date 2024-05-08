@@ -18,50 +18,69 @@
 main {
    background-color: black;
    height: 100%;
-   flex-grow: 1;
 }
 
+/*------------Menu--------------*/
+
 header {
-    background-color: var(--cor04);
-    display: flex;
     width: 100%;
-    padding: 5px 0px 5px 0px;
+    position: fixed;
 }
 
 nav {
-    color: white;
     display: flex;
+    background-color: var(--cor04);
     align-items: center;
     width: 100%;
-    justify-content: end;
+    justify-content: center;
+    height: 77px;
+    position: relative;
 }
 
-#logo {
+#menu {
     display: flex;
-    color: white;
-    font-size: 40px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-weight: bolder;
-    margin-left: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    max-width: 1700px;
 }
 
-h2 {
+#menu > a {
+    padding-right: 40px;
+}
+
+#price {
+    display: flex;
     font-size: 15px;
-    padding: 2px 14px 2px 14px;
-    margin: 0px 30px 0px 0px;
     border: 1px solid var(--cor03);
     border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 15px 1px 15px;
+    margin-right: 40px;
+    color: var(--cor01);
+}
+
+#logo > a {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 50px;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+#logo > a:hover {
+    color: var(--cor03);
 }
 
 a {
     color: white;
     text-decoration: none;
-    margin: 0px 35px 0px 0px;
-    font-size: 17px;
 }
 
-nav > a:hover {
+#menu > a:hover {
     color: var(--cor03);
     transform: scale(1.1);
 }
@@ -74,27 +93,24 @@ button {
     background-color: var(--cor03);
     cursor: pointer;
     border: 3px solid white;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 button:hover {
     color: var(--cor02);
+    transform: scale(1.1);
 }
+
 #titulo {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
-}
-
-h1 {
+    padding-top: 120px;
     color: white;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 2px;
+    font-size: 3rem;
 }
 
-/*--------------------------*/
+/*------------Tokens--------------*/
 
 #containertokens {
     display: flex;
@@ -223,8 +239,10 @@ footer {
     font-size: 16px;
 }
 
-#contactus {
-    display: flex;
+#contactus > a {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 20px;
 }
 
 #contactus a:hover {
