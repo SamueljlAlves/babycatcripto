@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 1024px) {
+    #tokensgroup {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #menu > a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #containersonfooter {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .links {
+        padding: 50px;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -22,9 +46,13 @@ main {
 
 /*------------Menu--------------*/
 
+.i {
+}
+
 header {
     width: 100%;
     position: fixed;
+    top: 0;
 }
 
 nav {
@@ -43,6 +71,8 @@ nav {
     align-items: center;
     justify-content: end;
     max-width: 1700px;
+    text-shadow: 1px 2px 2px black;
+    white-space: nowrap;
 }
 
 #menu > a {
@@ -61,6 +91,10 @@ nav {
     color: var(--cor01);
 }
 
+#logo {
+    padding-right: 30px;
+}
+
 #logo > a {
     display: flex;
     color: white;
@@ -69,6 +103,7 @@ nav {
     margin-left: 50px;
     font-weight: 700;
     gap: 1rem;
+    text-shadow: 1px 2px 2px black;
 }
 
 #logo > a:hover {
@@ -92,13 +127,14 @@ button {
     padding: 7px 25px 7px 25px;
     background-color: var(--cor03);
     cursor: pointer;
-    border: 3px solid white;
+    border: 2px solid white;
     margin-right: 50px;
 }
 
 button:hover {
-    color: var(--cor02);
+    color: var(--cor04);
     transform: scale(1.1);
+    box-shadow: 2px 2px 10px black;
 }
 
 #titulo {
@@ -114,47 +150,69 @@ button:hover {
 
 #containertokens {
     display: flex;
-    height: 500px;
-    padding: 64px 140px;
+    width: 100%;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.Tokens {
+#cointernersontokens {
     display: flex;
-    border-radius: 50px;
-    margin: 30px;
-    width: 100%;
-    padding: 7px 25px 7px 25px;
-    background: rgba(46, 34, 26, 0.9);
-    border: 3px solid white;
     flex-direction: column;
+    max-width: 1700px;
+    
+}
+
+#tokensgroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tokens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    width: 50%;
+    margin: 40px;
+    padding: 2rem;
+    border-radius: 40px;
+    background: var(--cor04);
+    border: 3px solid white;
 }
 
 .titletokens{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    text-shadow: 3px 4px 2px black;
+    font-size: 25px;
+    color: white;
 }
 
 .imgtokens{
     border-radius: 50px;
-}
-
-.titletokens {
-    display: flex;
-    font-size: 25px;
-    color: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.596);
 }
 
 .texttokens {
     font-size: 15px;
     color: white;
+    padding: 15px;
+    text-shadow: 1px 2px 2px black;
 }
 
 .swaptokens {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    font-weight: 700;
 } 
 
 .buytokens {
@@ -164,9 +222,11 @@ button:hover {
     border: 1px solid white;
     background-color: green;
     padding: 10px 1.5px 10px 1.5px;
-    width: 95%;
+    width: 100%;
     margin: 0px 0px 10px 0px;
     justify-content: center;
+    white-space: nowrap;
+    font-weight: 700;
 }
 
 .buytokens:hover {
@@ -180,11 +240,11 @@ button:hover {
     font-size: 15px;
     background-color: var(--cor02);
     padding: 10px 1.5px 10px 1.5px;
-    width: 95%;
+    width: 100%;
     margin: 0px;
     justify-content: center;
+    white-space: nowrap;
 }
-
 
 .viewtokens:hover {
     color: var(--cor03);
@@ -201,6 +261,7 @@ footer {
 #containerfooter {
     display: flex;
     width: 100%;
+    max-width: 1700px;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -211,8 +272,7 @@ footer {
 #containersonfooter {
     display: flex;
     width: 100%;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
     padding: 1rem;
 }
